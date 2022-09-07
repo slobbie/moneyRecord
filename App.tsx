@@ -9,35 +9,31 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import SvgIcon from './src/components/common/svgIcon/SvgIcon';
+import Config from 'react-native-config';
+import {Text} from 'react-native-svg';
 
 const App = () => {
+  const Key = Config.API_KEY;
+  console.log(Key);
   return (
     <SafeAreaView>
-      <SvgIcon name="PowerOff" fill="red" />
+      {/* <SvgIcon name="PowerOff" fill="red" /> */}
+      <View style={{...Styles.test}}>
+        <Text>APIdasasasa:</Text>
+      </View>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+const Styles = StyleSheet.create({
+  test: {
+    width: 1000,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'red',
   },
 });
 

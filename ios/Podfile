@@ -9,6 +9,8 @@ production = ENV["PRODUCTION"] == "1"
 target 'moneyRecord' do
   config = use_native_modules!
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config/react-native-config.podspec'
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 
